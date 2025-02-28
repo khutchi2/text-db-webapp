@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask K8s App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Flask K8s Message Board</h1>
+        
+        <div class="form-container">
+            <h2>Add a New Message</h2>
+            <div class="form">
+                <input type="text" id="title" placeholder="Title" required>
+                <textarea id="content" placeholder="Message content..." rows="4" required></textarea>
+                <button id="submit-btn">Add Message</button>
+            </div>
+        </div>
+        
+        <h2>Messages</h2>
+        <div id="messages-container">
+            <!-- Messages will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
