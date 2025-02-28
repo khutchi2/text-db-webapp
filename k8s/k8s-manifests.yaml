@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: flask-app:latest
+        image: <username>/<repo-name>:<tag>
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
@@ -66,7 +66,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx-custom:latest
+        image: <username>/<repo-name>:<tag>
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
