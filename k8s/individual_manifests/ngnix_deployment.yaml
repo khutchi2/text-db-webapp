@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  namespace: flask-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: <username>/<repo-name>:<tag>
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        securityContext:
+          runAsUser: 101  # nginx user ID
+          runAsGroup: 101  # nginx group ID
+          allowPrivilegeEscalation: false
